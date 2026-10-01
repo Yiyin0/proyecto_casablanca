@@ -1,7 +1,7 @@
 export const routes = [
   {
     id: 1,
-    name: 'Ruta de ejemplo',
+    name: 'Ruta del Museo de Casablanca',
     attractionIds: [1],
   },
   {
@@ -11,7 +11,7 @@ export const routes = [
   },
   {
     id: 3,
-    name: 'Tercera ruta (pendiente de definir con la municipalidad)',
-    attractionIds: [],
+    name: 'Ruta Plaza de Armas',
+    attractionIds: [2],
   },
 ]
