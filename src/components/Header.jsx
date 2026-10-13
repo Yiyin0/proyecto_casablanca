@@ -14,8 +14,14 @@ function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link to="/" className="brand" onClick={() => setMenuOpen(false)}>
-          Casablanca
+        <Link
+          to="/"
+          className="brand"
+          aria-label="Municipalidad de Casablanca, inicio"
+          onClick={() => setMenuOpen(false)}
+        >
+          <span className="brand-name">Municipalidad de Casablanca</span>
+          <span className="brand-subtitle">Dirección de Relaciones Públicas, Cultura y Turismo</span>
         </Link>
 
         <button

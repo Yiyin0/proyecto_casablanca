@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { attractions } from '../data/attractions'
 import { routes } from '../data/routes'
+import heroImage from '../assets/casablanca-hero.jpg'
 
 
 function LeafIcon() {
@@ -93,61 +94,50 @@ function Home() {
 
   return (
     <div className="home">
-      <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-layers" aria-hidden="true">
-          <div className="hero-glow" />
-          <div className="hero-vines" />
-          <div className="hero-mist" />
-          <span className="drift-leaf leaf-a" />
-          <span className="drift-leaf leaf-b" />
-          <span className="drift-leaf leaf-c" />
-        </div>
+      <section
+        className="hero"
+        aria-labelledby="hero-title"
+        style={{ '--hero-image': `url(${heroImage})` }}
+      >
+        <div className="hero-overlay" aria-hidden="true" />
+
         <div className="section-inner hero-grid">
           <div className="hero-copy">
-            <p className="hero-kicker">Casablanca</p>
-            <h1 id="hero-title">Título principal</h1>
-            <p className="hero-subtitle">Subtítulo placeholder</p>
+            <p className="hero-kicker">DESCUBRE CASABLANCA</p>
+
+            <h1 id="hero-title">
+              Casablanca: El brindis de Chile con el Pacífico
+            </h1>
+
+            <p className="hero-subtitle">
+              Explora la cultura, el patrimonio y los atractivos de nuestra comuna.
+            </p>
+
             <div className="hero-actions">
               <Link className="btn btn-primary" to="/attractions">
                 Explorar atractivos
               </Link>
+
               <Link className="btn btn-secondary" to="/routes">
                 Explorar rutas
               </Link>
             </div>
           </div>
-          <div className="hero-stage">
-            <div
-              className="media-placeholder hero-visual"
-              role="img"
-              aria-label="Espacio reservado para una imagen de Casablanca"
-            >
-              <span>Imagen de naturaleza y patrimonio</span>
-            </div>
-            <div
-              className="hero-character"
-              role="img"
-              aria-label="Espacio reservado para una ilustración de personaje turístico"
-            >
-              <span>Ilustración del personaje</span>
-            </div>
-          </div>
         </div>
-        <VineWave className="wave wave-cream" />
       </section>
 
       <section className="section access-section" aria-labelledby="access-title">
         <div className="section-inner">
           <h2 id="access-title">Accesos principales</h2>
           <p className="section-ornament" aria-hidden="true" />
-          <p className="section-lead">Descripción placeholder de esta sección.</p>
+          <p className="section-lead">Encuentra lugares de interés y descubre nuevas formas de recorrer Casablanca</p>
           <div className="access-grid">
             <Link className="access-card" to="/attractions">
               <span className="access-icon-wrap" aria-hidden="true">
                 <LeafIcon />
               </span>
               <h3>Atractivos</h3>
-              <p>Descripción placeholder.</p>
+              <p>Descubre lugares de interés cultural, histórico y turístico de la comuna</p>
             </Link>
             <a className="access-card" href="#mapa">
               <span className="access-icon-wrap earth" aria-hidden="true">
@@ -172,7 +162,7 @@ function Home() {
         <div className="section-inner">
           <h2 id="attractions-title">Atractivos</h2>
           <p className="section-ornament" aria-hidden="true" />
-          <p className="section-lead">Descripción placeholder de esta sección.</p>
+          <p className="section-lead">Conoce los lugares que forman parte de la identidad de Casablanca</p>
           <div className="card-grid">
             {attractions.map((attraction) => (
               <article className="content-card ticket-card" key={attraction.id}>
@@ -239,7 +229,7 @@ function Home() {
         <div className="section-inner">
           <h2 id="routes-title">Rutas autoguiadas</h2>
           <p className="section-ornament" aria-hidden="true" />
-          <p className="section-lead">Descripción placeholder de esta sección.</p>
+          <p className="section-lead">Recorre la comuna a tu ritmo mediante itinerarios autoguiados</p>
           <div className="card-grid routes-grid">
             {routes.map((route) => (
               <article className="content-card route-card" key={route.id}>
