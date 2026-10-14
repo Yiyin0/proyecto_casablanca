@@ -191,9 +191,9 @@
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: 800px;
+  min-height: min(560px, 80svh);
   overflow: hidden;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   color: var(--text-on-dark);
 
   background-image: var(--hero-image);
@@ -1039,7 +1039,7 @@
 
 .page-eyebrow {
   margin: 0 0 0.65rem;
-  color: var(--gold, #c5a66a);
+  color: var(--wine);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1051,7 +1051,7 @@
 }
 
 .page-intro {
-  max-width: 650px;
+  max-width: 760px;
   margin: 0 auto;
   line-height: 1.8;
 }

@@ -15,9 +15,9 @@ function Footer() {
 
         <nav className="footer-nav" aria-label="Navegación del pie de página">
           <h2>Explora</h2>
-          <Link to="/attractions">Atractivos turísticos</Link>
-          <Link to="/routes">Rutas autoguiadas</Link>
-          <Link to="/profile">Perfil</Link>
+          <Link to="/map">Mapa</Link>
+          <Link to="/routes">Rutas</Link>
+          <Link to="/attractions">Atractivos</Link>
         </nav>
 
         <div className="footer-status">

@@ -3,9 +3,9 @@ import { Link, NavLink } from 'react-router-dom'
 
 const links = [
   { to: '/', label: 'Inicio', end: true },
-  { to: '/attractions', label: 'Atractivos' },
+  { to: '/map', label: 'Mapa' },
   { to: '/routes', label: 'Rutas' },
-  { to: '/profile', label: 'Perfil' },
+  { to: '/attractions', label: 'Atractivos' },
 ]
 
 function Header() {

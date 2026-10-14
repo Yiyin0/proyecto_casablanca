@@ -6,7 +6,7 @@ function Routes() {
     <section className="page routes-page">
       <header className="page-heading">
         <p className="page-eyebrow">Recorre y descubre</p>
-        <h1>Rutas turísticas</h1>
+        <h1>Rutas</h1>
         <p className="page-intro">
           Explora Casablanca a través de recorridos que conectan
           sus principales espacios históricos y culturales.
