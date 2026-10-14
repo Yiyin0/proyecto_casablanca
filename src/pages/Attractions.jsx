@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { attractions } from '../data/attractions'
 
 function Attractions() {
@@ -5,7 +6,7 @@ function Attractions() {
     <section className="page attractions-page">
       <header className="page-heading">
         <p className="page-eyebrow">Descubre Casablanca</p>
-        <h1>Atractivos turísticos</h1>
+        <h1>Atractivos</h1>
         <p className="page-intro">
           Conoce los espacios históricos, culturales y patrimoniales
           que forman parte de la identidad de Casablanca.
@@ -26,6 +27,9 @@ function Attractions() {
             <div className="card-body">
               <h2>{attraction.name}</h2>
               <p>{attraction.description}</p>
+              <Link className="btn btn-text" to={`/attractions/${attraction.id}`}>
+                Ver detalle
+              </Link>
             </div>
           </article>
         ))}

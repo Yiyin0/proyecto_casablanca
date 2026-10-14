@@ -1216,3 +1216,183 @@
     font-size: clamp(2.2rem, 9vw, 3rem);
   }
 }
+
+/* Páginas de detalle */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 1rem;
+  color: var(--wine);
+  font-weight: 600;
+  text-underline-offset: 0.22em;
+}
+
+.stop-list {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.stop {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(61, 38, 22, 0.08);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.stop-number {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--wine);
+  color: var(--cream);
+  font-weight: 700;
+}
+
+.stop-body {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.stop-body img {
+  flex: none;
+  width: 120px;
+  height: 90px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.stop h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--forest);
+}
+
+.stop h2 a {
+  color: inherit;
+  text-underline-offset: 0.22em;
+}
+
+.detail-article {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.detail-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.detail-text h1 {
+  text-align: left;
+}
+
+.detail-text p {
+  line-height: 1.7;
+}
+
+.detail-routes {
+  margin-top: 1.5rem;
+}
+
+.detail-routes h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  color: var(--forest);
+}
+
+.detail-routes a {
+  color: var(--wine);
+  font-weight: 600;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 700px) {
+  .detail-article {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stop-body {
+    flex-direction: column;
+  }
+
+  .stop-body img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* Mapa real */
+.map-page .map-frame {
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--wine);
+  border-radius: 1rem;
+  background: none;
+  box-shadow: none;
+}
+
+.map-canvas {
+  width: 100%;
+  height: clamp(360px, 62svh, 640px);
+  font-family: var(--sans);
+}
+
+.map-page .map-note {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Botones de zoom más grandes para tocar con facilidad */
+.map-page .map-canvas .leaflet-bar a {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 1.4rem;
+}
+
+.leaflet-pin {
+  background: none;
+  border: 0;
+}
+
+.leaflet-pin span {
+  display: block;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--wine);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px var(--wine);
+}
+
+.leaflet-pin span::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}

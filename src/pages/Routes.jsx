@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { routes } from '../data/routes'
 import { attractions } from '../data/attractions'
 
@@ -44,6 +45,10 @@ function Routes() {
                     <p>Información en preparación.</p>
                   )}
                 </div>
+
+                <Link className="btn btn-text" to={`/routes/${route.id}`}>
+                  Ver ruta
+                </Link>
               </div>
             </article>
           )
